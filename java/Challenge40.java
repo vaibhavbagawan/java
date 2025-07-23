@@ -1,4 +1,4 @@
-// sum and average
+package java;// sum and average
 
 public class Challenge40 {
     public static void main(String[] args){

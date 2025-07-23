@@ -1,4 +1,4 @@
-// in this code, we just print a hello world string.
+package java;// in this code, we just print a hello world string.
 
 public class HelloWorld{
   public static void main(String[] args){

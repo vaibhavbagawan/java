@@ -1,4 +1,4 @@
-//this code is used to create array and take values from the user.
+package java;//this code is used to create array and take values from the user.
 
 import java.util.Scanner;
 
