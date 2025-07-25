@@ -1,4 +1,4 @@
-package java;// sum and average
+// this code is used to add element and average
 
 public class Challenge40 {
     public static void main(String[] args){
@@ -17,13 +17,7 @@ public class Challenge40 {
         return sum;
     }
     public static double average(int[] array){
-        int i = 0;
-        int sum = 0;
-        while(i<array.length) {
-            sum += array[i];
-            i++;
-        }
-        double average = sum/(double)array.length;
-        return average;
+//        double average = sum(array)/(double)array.length;
+        return sum(array)/(double)array.length;
     }
 }
