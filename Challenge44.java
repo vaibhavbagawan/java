@@ -15,35 +15,28 @@ public class Challenge44 {
             System.out.print("Please enter the element which you want to delete: ");
             int deleteTarget = input.nextInt();
 
-            int a = 0;
-            int b = 0;
-            while(a<arr.length){
-                if(deleteTarget==arr[a]){
-                    b++;
+            int occurrences = Challenge41.checkOccurrences(arr,deleteTarget);
+
+            if(occurrences !=0){
+                int[] newArr = deleteArrayElement(arr, deleteTarget, occurrences);
+                if(newArr.length==0){
+                    System.out.println("all element are deleted do array is empty");
+                }else{
+                    ArrayUtility.printArray(newArr);
                 }
-                a++;
             }
-                if(b!=0){
-                    int[] newArr = deleteArrayElement(arr, deleteTarget,b);
-                    int i = 0;
-                    if(newArr.length==0){
-                        System.out.println("all element are deleted do array is empty");
-                    }else{
-                        ArrayUtility.printArray(newArr);
-                    }
-                }
-                else{
-                    System.out.println("deleting element is not found in array");
-                }
+            else{
+                System.out.println("deleting element is not found in array");
+            }
 
         }
 
     }
 
-    public static int[] deleteArrayElement(int[] arr,int deleteTarget,int b){
+    public static int[] deleteArrayElement(int[] arr,int deleteTarget,int occurrences){
         int i = 0;
         int e = 0;
-        int[] newArr = new int[(arr.length-b)];
+        int[] newArr = new int[(arr.length- occurrences)];
         while(i<arr.length){
             if(arr[i]==deleteTarget){
                 i++;
