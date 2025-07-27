@@ -5,30 +5,35 @@ public class Challenge43 {
 
         int arr[] = ArrayUtility.takeArray();
 
-        boolean isShort = shortcheck(arr);
-        if(isShort==true){
-            System.out.println("Entered array is shorted ");
+        boolean is = shortcheck(arr);
+
+        if(is){
+            System.out.println("Array is sorted");
         }
         else{
-            System.out.println("Entered array is not shorted");
+            System.out.println("Array is not sorted");
         }
+
     }
     public static boolean shortcheck(int[] arr){
         int i = 0;
-        while(true){
-            if(i==arr.length){
-                break;
+        int countA = 0;
+        int countB = 0;
+        while(i<(arr.length-1)){
+            if(!(arr[i]<=arr[i+1])){
+                countA++;
             }
-            if(arr[i]<=arr[i+1]){
-                return true;
-            }
-            else if(arr[i]>=arr[i+1]){
-                return true;
-            }
-            else{
-                return false;
-            }
+        if(!(arr[i]>=arr[i+1])){
+            countB++;
         }
-            i++;
+        i++;
+        }
+        if(countA ==0 || countB == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
+
 }
