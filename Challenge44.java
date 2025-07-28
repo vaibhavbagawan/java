@@ -22,6 +22,7 @@ public class Challenge44 {
                 if(newArr.length==0){
                     System.out.println("all element are deleted do array is empty");
                 }else{
+                    System.out.print("Here is new array: ");
                     ArrayUtility.printArray(newArr);
                 }
             }
@@ -38,16 +39,13 @@ public class Challenge44 {
         int e = 0;
         int[] newArr = new int[(arr.length- occurrences)];
         while(i<arr.length){
-            if(arr[i]==deleteTarget){
-                i++;
-                continue;
-            }
-            else{
+            if(arr[i]!=deleteTarget){
                 newArr[e]=arr[i];
+                e++;
             }
             i++;
-            e++;
         }
          return newArr;
     }
 }
+
