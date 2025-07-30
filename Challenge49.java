@@ -16,7 +16,7 @@ public class Challenge49 {
         int i = 0;
         while(i <array2d.length){
             int j = 0;
-            while(j<array2d[0].length){
+            while(j<array2d[i].length){
                sum+=array2d[i][j];
                 j++;
             }
@@ -26,8 +26,11 @@ public class Challenge49 {
     }
 
     public static double average(int[][] array2d){
+        if(array2d.length == 0){
+            return 0;
+        }
         double sum = sum(array2d);
-        double average = sum/(array2d.length+array2d[0].length);
+        double average = sum/(array2d.length*array2d[0].length);
         return average;
     }
 }

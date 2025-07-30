@@ -49,15 +49,15 @@ public class ArrayUtility{
 
     //to print the 2-D array
     public static void print2dArray(int[][] array2d){
-        int e = 0;
-        while(e <array2d.length){
+        int i = 0;
+        while(i <array2d.length){
             int j = 0;
-            while(j<array2d[0].length){
-                System.out.print(array2d[e][j]+"\t");
+            while(j<array2d[i].length){
+                System.out.print(array2d[i][j]+"\t");
                 j++;
             }
             System.out.print("\n");
-            e++;
+            i++;
         }
     }
 }
