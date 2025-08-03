@@ -1,4 +1,4 @@
-public class Course {
+public class Course52 {
     static int maxCapacity = 500;
     String courseName;
     int enrolledStudent;
@@ -9,14 +9,14 @@ public class Course {
         maxCapacity--;
     }
 
-    Course(String courseName){
+    Course52(String courseName){
         this.courseName=courseName;
         this.enrolledStudent=0;
         this.enrolledStudents = new String[maxCapacity];
     }
 
     static void setMaxCapacity (int maxCapacity){
-        Course.maxCapacity=maxCapacity;
+        Course52.maxCapacity=maxCapacity;
 
     }
 

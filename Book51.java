@@ -1,4 +1,4 @@
-public class Book {
+public class Book51 {
     static int totalBooks;
     String title;
     String author;
@@ -12,13 +12,13 @@ public class Book {
         totalBooks++;
     }
 
-    Book(String isbn,String title,String author){
+    Book51(String isbn, String title, String author){
         this.isbn = isbn;
         this.title = title;
         this.author = author;
     }
 
-    Book(String isbn){
+    Book51(String isbn){
         this(isbn,"unknown","unknown");
     }
 
@@ -28,7 +28,7 @@ public class Book {
 
     void borrowBook(){
         if(isBorrowed){
-            System.out.println("Book is already borrowed");
+            System.out.println("Book51 is already borrowed");
         }else{
             this.isBorrowed = true;
             System.out.println("Enjoy "+this.title);
@@ -46,8 +46,8 @@ public class Book {
     }
 
     public static void main(String[] args) {
-        Book designOfThings = new Book("1","design","vaibhav");
-        Book myBook = new Book("2");
+        Book51 designOfThings = new Book51("1","design","vaibhav");
+        Book51 myBook = new Book51("2");
         System.out.println(getTotalBooks());
         myBook.borrowBook();
         designOfThings.borrowBook();
