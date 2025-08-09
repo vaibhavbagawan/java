@@ -18,7 +18,7 @@ public class Challenge58 {
         System.out.println(result);
     }
 
-    public String calculator(int num1,int num2,int task){
+    public String calculator(int num1,int num2,int task){   
         return switch(task){
             case 1 -> "Addition of "+num1+" and "+num2+" is: "+(num1+num2);
             case 2 -> "Subtraction of "+num1+" and "+num2+" is: "+(num1-num2);
