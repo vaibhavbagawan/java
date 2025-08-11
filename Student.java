@@ -10,7 +10,7 @@ public class Student{
     @Override
     public String toString() {
 
-        return "Student" + "{Name: '" + name + "\'," + " Age: '" + age + "\'}";
+        return "Student" + "{Name: '" + name + "'," + " Age: '" + age + "'}";
     }
 
     public static void main(String[] args) {
